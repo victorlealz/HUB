@@ -1,0 +1,18 @@
+{
+  "apps": [
+    { "url": "https://github.com/victorlealz/AwakenDrills", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/VictorOSint", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/ConsultaCircunscricao", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/MakaiPerformance", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/VictorSCHEMA", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/awaken-bjj", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/CryptoAnalysis", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/GeradorOficios", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/ContaNumerosXML", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/CollageReport144", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/VictorZips", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/VICTORANALISISM.W", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/VICTORCRUZA", "icon": "/assets/app-placeholder.svg" },
+    { "url": "https://github.com/victorlealz/QRCODEGENERATOR", "icon": "/assets/app-placeholder.svg" }
+  ]
+}

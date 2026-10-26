@@ -1,0 +1,13 @@
+{
+  "brand": "HubWinZip144",
+  "eyebrow": "CENTRAL DE PLATAFORMAS",
+  "headline": "Um ponto de entrada. Todas as suas plataformas.",
+  "description": "Acesse rapidamente cada ferramenta em um hub leve, direto e sempre atualizado pelo catálogo JSON.",
+  "features": {
+    "auth": false,
+    "billing": false
+  },
+  "billing": {
+    "mode": "free"
+  }
+}

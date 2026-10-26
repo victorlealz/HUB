@@ -1,0 +1,19 @@
+name = "hubwinzip144"
+main = "./src/index.js"
+compatibility_date = "2026-10-26"
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[vars]
+AUTH_ENABLED = "false"
+BILLING_ENABLED = "false"
+
+# Futuro Cloudflare D1:
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "hubwinzip144"
+# database_id = "COLOQUE_O_DATABASE_ID_AQUI"

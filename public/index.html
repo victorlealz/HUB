@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HubWinZip144 — um ponto de entrada para todas as plataformas.">
+  <meta name="theme-color" content="#05070a">
+  <meta name="color-scheme" content="dark">
+  <title>HubWinZip144</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/css/styles.css?v=20261026-2">
+  <script type="module" src="/js/app.js?v=20261026-2"></script>
+</head>
+<body>
+  <a class="skip-link" href="#apps">Ir para as plataformas</a>
+
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HubWinZip144 — início">
+      <img class="brand__mark" src="/assets/logo.svg" alt="" width="32" height="32">
+      <span class="brand__name">HubWinZip144</span>
+    </a>
+
+    <nav class="topbar__actions" aria-label="Ações principais">
+      <span class="access-badge"><span class="access-badge__dot"></span>Acesso gratuito</span>
+      <button class="search-trigger" id="openSearch" type="button" aria-haspopup="dialog" aria-controls="commandPalette">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <span>Pesquisar</span>
+        <kbd><span class="shortcut-mod">Ctrl</span> K</kbd>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <p class="eyebrow" id="eyebrow">CENTRAL DE PLATAFORMAS</p>
+      <h1 id="heroTitle">Um ponto de entrada.<br><span>Todas as suas plataformas.</span></h1>
+      <p class="hero__copy" id="heroCopy">Acesse rapidamente cada ferramenta em um hub leve, direto e sempre atualizado pelo catálogo JSON.</p>
+
+      <form class="spotlight" id="searchForm" role="search" autocomplete="off">
+        <svg class="spotlight__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <label class="sr-only" for="mainSearch">Pesquisar plataformas</label>
+        <input id="mainSearch" name="q" type="search" placeholder="Pesquisar uma plataforma…" spellcheck="false">
+        <span class="spotlight__hint" aria-hidden="true">/</span>
+      </form>
+
+      <div class="hero__meta" aria-live="polite">
+        <span><strong id="appCount">—</strong> plataformas</span>
+        <span class="meta-divider" aria-hidden="true"></span>
+        <span>Catálogo em <code>data/apps.json</code></span>
+      </div>
+    </section>
+
+    <section class="catalog" id="apps" aria-labelledby="catalogTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">INDEX</p>
+          <h2 id="catalogTitle">Plataformas</h2>
+        </div>
+        <p id="resultStatus" class="result-status" aria-live="polite">Carregando catálogo…</p>
+      </div>
+
+      <div class="app-grid" id="appGrid" aria-busy="true">
+        <article class="app-card app-card--skeleton" aria-hidden="true"></article>
+        <article class="app-card app-card--skeleton" aria-hidden="true"></article>
+        <article class="app-card app-card--skeleton" aria-hidden="true"></article>
+        <article class="app-card app-card--skeleton" aria-hidden="true"></article>
+      </div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-state__mark">⌕</div>
+        <h3>Nenhuma plataforma encontrada</h3>
+        <p>Tente outro nome, endereço ou palavra-chave.</p>
+        <button type="button" id="clearSearch">Limpar pesquisa</button>
+      </div>
+
+      <div class="load-error" id="loadError" hidden role="alert">
+        <strong>O catálogo não pôde ser carregado.</strong>
+        <span>Revise <code>public/data/apps.json</code> e confirme se o JSON está válido.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="/assets/logo.svg" alt="" width="24" height="24">
+      <span>HubWinZip144</span>
+    </div>
+    <p>Gratuito agora. Estruturado para autenticação, D1 e cobrança futura.</p>
+    <a href="/api/health" class="footer__health" target="_blank" rel="noreferrer">Status da API <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <dialog class="command" id="commandPalette" aria-labelledby="commandTitle">
+    <div class="command__surface">
+      <div class="command__search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <label class="sr-only" for="commandInput" id="commandTitle">Pesquisar e abrir plataforma</label>
+        <input id="commandInput" type="search" placeholder="Digite para abrir uma plataforma…" spellcheck="false">
+        <button class="command__close" id="closeSearch" type="button" aria-label="Fechar pesquisa">ESC</button>
+      </div>
+      <div class="command__label">Resultados</div>
+      <div class="command__results" id="commandResults" role="listbox"></div>
+      <div class="command__footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navegar</span>
+        <span><kbd>↵</kbd> abrir</span>
+        <span><kbd>esc</kbd> fechar</span>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>O HubWinZip144 precisa de JavaScript para carregar o catálogo de plataformas.</noscript>
+</body>
+</html>

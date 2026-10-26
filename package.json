@@ -1,0 +1,17 @@
+{
+  "name": "hubwinzip144",
+  "version": "1.1.1",
+  "private": true,
+  "description": "Hub minimalista para plataformas, preparado para Cloudflare Workers + Static Assets.",
+  "packageManager": "bun@1.4.4",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:dry": "wrangler deploy --dry-run",
+    "check": "node --check public/js/app.js && node --check src/index.js"
+  },
+  "devDependencies": {
+    "wrangler": "4.153.0"
+  },
+  "type": "module"
+}
